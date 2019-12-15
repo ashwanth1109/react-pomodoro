@@ -24,7 +24,7 @@ export const MainContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const TimeContainer = styled.div`
@@ -42,7 +42,7 @@ export const Time = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: "Lilita One", cursive;
   color: ${colors.textColor};
 `;

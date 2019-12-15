@@ -15,3 +15,5 @@ const littleBoyBlue = "#6F9BE8";
 export const bg = littleBoyBlue;
 export const textColor = maastrichtBlue;
 export const timer = amaranthRed;
+export const button = deepSaffron;
+export const buttonHighlight = liver;

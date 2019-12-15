@@ -8,7 +8,9 @@ export default (cb, delay) => {
   }, [cb]);
 
   useEffect(() => {
-    let id = setInterval(savedCb.current, delay);
-    return () => clearInterval(id);
-  }, []);
+    if (delay !== null) {
+      let id = setInterval(savedCb.current, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
 };

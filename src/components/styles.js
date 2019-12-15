@@ -21,7 +21,6 @@ export const Heading = styled.h1`
 `;
 
 export const MainContainer = styled.div`
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,4 +44,22 @@ export const Time = styled.div`
   font-size: 5rem;
   font-family: "Lilita One", cursive;
   color: ${colors.textColor};
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin: 32px 0;
+`;
+
+export const Button = styled.button`
+  padding: 8px;
+  font-size: 2rem;
+  margin: 0 16px;
+  text-transform: uppercase;
+  background: ${colors.button};
+  cursor: pointer;
+  border: 1px solid ${colors.buttonHighlight};
+  outline: none;
 `;

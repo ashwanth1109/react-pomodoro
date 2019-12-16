@@ -19,16 +19,27 @@ export default () => {
 
   const decrementTime = useCallback(() => {
     setTime(prev => {
-      if (prev.seconds === 0) {
+      const { minutes, seconds } = prev;
+      if (seconds === 0) {
+        document.title = `${minutes < 11 ? `0${minutes - 1}` : minutes - 1}:59`;
         return {
-          minutes: prev.minutes - 1,
+          minutes: minutes - 1,
           seconds: 59
         };
-      } else
+      } else {
+        document.title = `${minutes < 10 ? `0${minutes}` : minutes}:${
+          seconds < 11 ? `0${seconds - 1}` : `${seconds - 1}`
+        }`;
+        if (minutes === 0 && seconds === 1) {
+          setTimeout(() => {
+            document.title = `Time's up`;
+          }, 1000);
+        }
         return {
-          minutes: prev.minutes,
-          seconds: prev.seconds - 1
+          minutes,
+          seconds: seconds - 1
         };
+      }
     });
   }, [time]);
 
